@@ -1,0 +1,139 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 10,
+        "name": "Validate that a text is present inside the list",
+        "description": "",
+        "id": "probamos-cositas;validate-that-a-text-is-present-inside-the-list;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2074989500,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I navigate to the list page",
+            "match": {
+              "location": "ListSteps.navigateToListPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1237579800,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I search Florida in the list",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Florida",
+                  "offset": 9
+                }
+              ],
+              "location": "ListSteps.searchTheList(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1408965300,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I can find Miami, Florida in the list",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Miami, Florida",
+                  "offset": 11
+                }
+              ],
+              "location": "ListSteps.theCityIsThere(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Test"
+          }
+        ]
+      },
+      {
+        "line": 11,
+        "name": "Validate that a text is present inside the list",
+        "description": "",
+        "id": "probamos-cositas;validate-that-a-text-is-present-inside-the-list;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 67629500,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I navigate to the list page",
+            "match": {
+              "location": "ListSteps.navigateToListPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1129689300,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I search Seattle in the list",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Seattle",
+                  "offset": 9
+                }
+              ],
+              "location": "ListSteps.searchTheList(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 31486400,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I can find Seattle, Washington in the list",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Seattle, Washington",
+                  "offset": 11
+                }
+              ],
+              "location": "ListSteps.theCityIsThere(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Test"
+          }
+        ]
+      }
+    ],
+    "name": "Probamos cositas",
+    "description": "",
+    "id": "probamos-cositas",
+    "keyword": "Feature",
+    "uri": "src/test/resources/features/Sanbox.feature",
+    "tags": []
+  }
+]
