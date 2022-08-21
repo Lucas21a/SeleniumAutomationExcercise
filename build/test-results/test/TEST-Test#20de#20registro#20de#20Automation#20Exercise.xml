@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Test de registro de Automation Exercise" tests="1" skipped="1" failures="0" errors="0" timestamp="2022-08-20T23:28:39" hostname="DESKTOP-4AUAMRO" time="5.427">
+  <properties/>
+  <testcase name="como usuario quiero registrarme en Automation Exercise" classname="Test de registro de Automation Exercise" time="5.427">
+    <skipped/>
+  </testcase>
+  <system-out><![CDATA[.UUU]]></system-out>
+  <system-err><![CDATA[Starting ChromeDriver 104.0.5112.79 (3cf3e8c8a07d104b9e1260c910efb8f383285dc5-refs/branch-heads/5112@{#1307}) on port 2232
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+ago. 21, 2022 1:28:41 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+</testsuite>

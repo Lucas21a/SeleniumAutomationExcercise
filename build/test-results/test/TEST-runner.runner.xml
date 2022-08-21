@@ -2,9 +2,33 @@
 <testsuite name="runner.runner" tests="0" skipped="0" failures="0" errors="0" timestamp="1970-01-01T00:00:00" hostname="DESKTOP-4AUAMRO" time="0.0">
   <properties/>
   <system-out><![CDATA[
-2 Scenarios (?[32m2 passed?[0m)
-6 Steps (?[32m6 passed?[0m)
-0m5,094s
+Undefined scenarios:
+src/test/resources/features/Register.feature:3 # como usuario quiero registrarme en Automation Exercise
+
+1 Scenarios (1 undefined)
+4 Steps (3 undefined, 1 passed)
+0m5,572s
+
+
+You can implement missing steps with the snippets below:
+
+@When("completa el formulario")
+public void completa_el_formulario() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new cucumber.api.PendingException();
+}
+
+@When("hace click en registrarme")
+public void hace_click_en_registrarme() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new cucumber.api.PendingException();
+}
+
+@Then("muestra que la cuenta fue creada")
+public void muestra_que_la_cuenta_fue_creada() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new cucumber.api.PendingException();
+}
 
 
 ]]></system-out>

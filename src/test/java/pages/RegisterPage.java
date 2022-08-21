@@ -23,4 +23,16 @@ public class RegisterPage extends BasePage {
         clickElement(buttonLogin);
     }
 
+    public void writeName(String name) {
+        write(nameLabel, name);
+    }
+
+    public void writeEmail(String email) {
+        write(emailLabel, email);
+    }
+
+    public void clickSingUp() {
+        clickElement(singUp);
+    }
+
 }

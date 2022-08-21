@@ -7,22 +7,24 @@ public class RegisterSteps {
 
     RegisterPage registro = new RegisterPage();
 
-    @Given("^estoy en la pagina de registro$")
+    @Given("^el usuario esta en la pagina de registro$")
     public void navigateToListPage() {
-
+        registro.navigateToAutomationExersice();
     }
 
-    @When("^yo completo el formulario$")
-    public void archTheList(String state) {
-    }
-
-    @And("^hago click en registrarme$")
-    public void searchTheList(String state) {
-
-    }
-
-    @Then("^muestra que la cuenta fue creada$")
-    public void theCityIsThere(String city) {
-
-    }
+    /*
+     * @When("^completa el formulario$")
+     * public void archTheList(String state) {
+     * }
+     * 
+     * @And("^hace click en registrarme$")
+     * public void searchTheList(String state) {
+     * 
+     * }
+     * 
+     * @Then("^muestra que la cuenta fue creada$")
+     * public void theCityIsThere(String city) {
+     * 
+     * }
+     */
 }
