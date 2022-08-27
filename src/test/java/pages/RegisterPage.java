@@ -2,8 +2,6 @@ package pages;
 
 public class RegisterPage extends BasePage {
 
-    // xPath de boton de login en header
-    private String buttonLogin = "//header/div[1]/div[1]/div[1]/div[2]/div[1]/ul[1]/li[4]/a[1]";
     // xPath de label de nombre en el sector de Registro
     private String nameLabel = "//body/section[@id='form']/div[1]/div[1]/div[3]/div[1]/form[1]/input[2]";
     // xPath de label de email en el sector de Registro
@@ -15,24 +13,26 @@ public class RegisterPage extends BasePage {
         super(driver);
     }
 
-    public void navigateToAutomationExersice() {
-        navigateTo("https://www.automationexercise.com/");
-    }
-
-    public void goToLoginPage() {
-        clickElement(buttonLogin);
-    }
-
+    // Rellenar campo Name en "New User SingUp"
     public void writeName(String name) {
         write(nameLabel, name);
     }
 
+    // Rellenar campo Email en "New User SingUp"
     public void writeEmail(String email) {
         write(emailLabel, email);
     }
 
+    // Click en el boton Singup
     public void clickSingUp() {
         clickElement(singUp);
+    }
+
+    //
+    public void registerNewUser(String name, String email) {
+        writeName(name);
+        writeEmail(email);
+        clickSingUp();
     }
 
 }

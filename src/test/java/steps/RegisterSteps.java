@@ -1,15 +1,18 @@
 package steps;
 
 import cucumber.api.java.en.*;
+import pages.MainPage;
 import pages.RegisterPage;
 
 public class RegisterSteps {
 
     RegisterPage registro = new RegisterPage();
+    MainPage main = new MainPage();
 
     @Given("^el usuario esta en la pagina de registro$")
     public void navigateToListPage() {
-        registro.navigateToAutomationExersice();
+        main.navigateToAutomationExersice();
+        main.goToLoginPage();
     }
 
     /*
