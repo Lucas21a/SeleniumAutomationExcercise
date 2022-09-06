@@ -24,54 +24,67 @@ public class RegisterFormPage extends BasePage {
         super(driver);
     }
 
+    // Completa el input Password
     public void completePassInput(String pass) {
         write(passInput, pass);
     }
 
+    // Selecciono el genero
     public void selectGender() {
         clickElement(genderButton);
     }
 
+    // Completa el input Name
     public void completeNameInput(String name) {
         write(nameInput, name);
     }
 
+    // Completa el input Last Name
     public void completeLastNameInput(String Lname) {
         write(lastNameInput, Lname);
     }
 
+    // Completa el input Company
     public void completeCompanyInput(String company) {
         write(companyInput, company);
     }
 
+    // Completa el input Address
     public void completeAddressInput(String address) {
         write(addressInput, address);
     }
 
+    // Completa el input State
     public void completeStateInput(String state) {
         write(stateInput, state);
     }
 
+    // Completa el input City
     public void completeCityInput(String city) {
         write(cityInput, city);
     }
 
+    // Completa el input ZipCode
     public void completeZipCodeInput(String zipCode) {
         write(zipCodeInput, zipCode);
     }
 
+    // Completa el input MobileNumber
     public void completeMobileInput(String mobile) {
         write(mobileNumberInput, mobile);
     }
 
+    // Selecciono el dia
     public void selectDayInput(int value) {
         selectFromDropdownByIndex(dayInput, value);
     }
 
+    // Selecciono el mes
     public void selectMonthInput(int value) {
         selectFromDropdownByIndex(monthInput, value);
     }
 
+    // Selecciono el año
     public void selectYearInput(int value) {
         selectFromDropdownByIndex(yearInput, value);
     }
