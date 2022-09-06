@@ -42,7 +42,7 @@ public class RegisterFormPage extends BasePage {
         write(lastNameInput, Lname);
     }
 
-    public void completeCompanyInputI(String company) {
+    public void completeCompanyInput(String company) {
         write(companyInput, company);
     }
 
@@ -50,7 +50,7 @@ public class RegisterFormPage extends BasePage {
         write(addressInput, address);
     }
 
-    public void completestateInput(String state) {
+    public void completeStateInput(String state) {
         write(stateInput, state);
     }
 
@@ -96,4 +96,14 @@ public class RegisterFormPage extends BasePage {
         clickOffers();
     }
 
+    public void completeBottomForm(String name, String Lname, String company, String state, String city, String zipCode,
+            String mobile) {
+        completeNameInput(name);
+        completeLastNameInput(Lname);
+        completeCompanyInput(company);
+        completeStateInput(state);
+        completeCityInput(city);
+        completeZipCodeInput(zipCode);
+        completeMobileInput(mobile);
+    }
 }
