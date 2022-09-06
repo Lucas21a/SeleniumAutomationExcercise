@@ -19,19 +19,21 @@ public class RegisterSteps {
 
     @When("^completa el formulario$")
     public void completeForm() {
-        registro.registerNewUser("name", "emaxitl@asfg");
+        registro.registerNewUser("matias", "mati@gmail.com");
         registerForm.completeTopForm("autitorojo123", 22, 10, 10);
+        registerForm.completeBottomForm("Matias", "Bouchet", "Google", "La Pampa 362", "California", "Los Angeles",
+                "1234", "2351246");
     }
 
-    /*
-     * @And("^hace click en registrarme$")
-     * public void searchTheList(String state) {
-     * 
-     * }
-     * 
-     * @Then("^muestra que la cuenta fue creada$")
-     * public void theCityIsThere(String city) {
-     * 
-     * }
-     */
+    @And("^hace click en registrarme$")
+    public void ClickRegister(String state) {
+        registerForm.clickCreateAccount();
+        registerForm.clickContinue();
+    }
+
+    @Then("^elimina la cuenta$")
+    public void ClickDelete(String city) {
+        main.deleteAccount();
+    }
+
 }

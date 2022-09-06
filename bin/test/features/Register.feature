@@ -4,5 +4,5 @@ Feature: Test de registro de Automation Exercise
         Given el usuario esta en la pagina de registro
         When completa el formulario
         And hace click en registrarme
-        Then muestra que la cuenta fue creada
+        Then elimina la cuenta
 

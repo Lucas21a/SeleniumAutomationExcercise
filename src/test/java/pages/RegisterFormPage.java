@@ -1,8 +1,5 @@
 package pages;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.Select;
-
 public class RegisterFormPage extends BasePage {
 
     String genderButton = "//input[@id='id_gender1']";
@@ -21,6 +18,7 @@ public class RegisterFormPage extends BasePage {
     String yearInput = "//select[@id='years']";
     String newsletterCheck = "//input[@id='newsletter']";
     String offersCheck = "//input[@id='optin']";
+    String continueButton = "//a[contains(text(),'Continue')]";
 
     public RegisterFormPage() {
         super(driver);
@@ -63,7 +61,7 @@ public class RegisterFormPage extends BasePage {
     }
 
     public void completeMobileInput(String mobile) {
-        write(zipCodeInput, mobile);
+        write(mobileNumberInput, mobile);
     }
 
     public void selectDayInput(int value) {
@@ -86,6 +84,15 @@ public class RegisterFormPage extends BasePage {
         clickElement(offersCheck);
     }
 
+    public void clickCreateAccount() {
+        clickElement(createAccountButton);
+    }
+
+    public void clickContinue() {
+        clickElement(continueButton);
+    }
+
+    // Completo la parte superior del formulario
     public void completeTopForm(String pass, int dValue, int mValue, int yValue) {
         selectGender();
         completePassInput(pass);
@@ -96,11 +103,13 @@ public class RegisterFormPage extends BasePage {
         clickOffers();
     }
 
-    public void completeBottomForm(String name, String Lname, String company, String state, String city, String zipCode,
-            String mobile) {
+    // Completo la inferior superior del formulario
+    public void completeBottomForm(String name, String Lname, String company, String address, String state, String city,
+            String zipCode, String mobile) {
         completeNameInput(name);
         completeLastNameInput(Lname);
         completeCompanyInput(company);
+        completeAddressInput(address);
         completeStateInput(state);
         completeCityInput(city);
         completeZipCodeInput(zipCode);

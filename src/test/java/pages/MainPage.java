@@ -4,6 +4,7 @@ public class MainPage extends BasePage {
 
     // xPath de boton de login en header
     private String buttonLogin = "//header/div[1]/div[1]/div[1]/div[2]/div[1]/ul[1]/li[4]/a[1]";
+    private String buttonDelete = "//header/div[1]/div[1]/div[1]/div[2]/div[1]/ul[1]/li[5]/a[1]";
 
     public MainPage() {
         super(driver);
@@ -16,6 +17,11 @@ public class MainPage extends BasePage {
     // Clickeo elemento "SingUp/Login"
     public void goToLoginPage() {
         clickElement(buttonLogin);
+    }
+
+    // Clickeo elemento "Delete Account"
+    public void deleteAccount() {
+        clickElement(buttonDelete);
     }
 
 }
