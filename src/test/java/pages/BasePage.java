@@ -119,4 +119,8 @@ public class BasePage {
         return url;
     }
 
+    public String getTextFromWebElemen(String locator) {
+        return find(locator).getText();
+    }
+
 }

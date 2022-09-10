@@ -2,23 +2,26 @@ package pages;
 
 public class RegisterFormPage extends BasePage {
 
-    String genderButton = "//input[@id='id_gender1']";
-    String passInput = "//input[@id='password']";
-    String nameInput = "//input[@id='first_name']";
-    String lastNameInput = "//input[@id='last_name']";
-    String companyInput = "//input[@id='company']";
-    String addressInput = "//input[@id='address1']";
-    String stateInput = "//input[@id='state']";
-    String cityInput = "//input[@id='city']";
-    String zipCodeInput = "//input[@id='zipcode']";
-    String mobileNumberInput = "//input[@id='mobile_number']";
-    String createAccountButton = "//button[contains(text(),'Create Account')]";
-    String dayInput = "//select[@id='days']";
-    String monthInput = "//select[@id='months']";
-    String yearInput = "//select[@id='years']";
-    String newsletterCheck = "//input[@id='newsletter']";
-    String offersCheck = "//input[@id='optin']";
-    String continueButton = "//a[contains(text(),'Continue')]";
+    private String genderButton = "//input[@id='id_gender1']";
+    private String passInput = "//input[@id='password']";
+    private String nameInput = "//input[@id='first_name']";
+    private String lastNameInput = "//input[@id='last_name']";
+    private String companyInput = "//input[@id='company']";
+    private String addressInput = "//input[@id='address1']";
+    private String address2Input = "//input[@id='address2']";
+    private String stateInput = "//input[@id='state']";
+    private String cityInput = "//input[@id='city']";
+    private String zipCodeInput = "//input[@id='zipcode']";
+    private String mobileNumberInput = "//input[@id='mobile_number']";
+    private String createAccountButton = "//button[contains(text(),'Create Account')]";
+    private String dayInput = "//select[@id='days']";
+    private String monthInput = "//select[@id='months']";
+    private String yearInput = "//select[@id='years']";
+    private String newsletterCheck = "//input[@id='newsletter']";
+    private String offersCheck = "//input[@id='optin']";
+    private String continueButton = "//a[contains(text(),'Continue')]";
+    private String enterAccountInformationLabel = "//b[contains(text(),'Enter Account Information')]";
+    private String accountCreatedLabel = "//b[contains(text(),'Account Created!')]";
 
     public RegisterFormPage() {
         super(driver);
@@ -52,6 +55,11 @@ public class RegisterFormPage extends BasePage {
     // Completa el input Address
     public void completeAddressInput(String address) {
         write(addressInput, address);
+    }
+
+    // Completa el input Address
+    public void completeAddress2Input(String address) {
+        write(address2Input, address);
     }
 
     // Completa el input State
@@ -105,6 +113,14 @@ public class RegisterFormPage extends BasePage {
         clickElement(continueButton);
     }
 
+    public boolean statusEnterAccountInfomation() {
+        return elementIsDisplayed(enterAccountInformationLabel);
+    }
+
+    public boolean statusAccountCreated() {
+        return elementIsDisplayed(accountCreatedLabel);
+    }
+
     // Completo la parte superior del formulario
     public void completeTopForm(String pass, int dValue, int mValue, int yValue) {
         selectGender();
@@ -117,15 +133,18 @@ public class RegisterFormPage extends BasePage {
     }
 
     // Completo la inferior superior del formulario
-    public void completeBottomForm(String name, String Lname, String company, String address, String state, String city,
+    public void completeBottomForm(String name, String Lname, String company, String address, String address2,
+            String state, String city,
             String zipCode, String mobile) {
         completeNameInput(name);
         completeLastNameInput(Lname);
         completeCompanyInput(company);
         completeAddressInput(address);
+        completeAddress2Input(address2);
         completeStateInput(state);
         completeCityInput(city);
         completeZipCodeInput(zipCode);
         completeMobileInput(mobile);
     }
+
 }

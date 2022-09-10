@@ -29,19 +29,19 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">1</div>
 <p>failures</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="ignored">
-<div class="counter">1</div>
+<div class="counter">0</div>
 <p>ignored</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">5.427s</div>
+<div class="counter">50.237s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox skipped" id="successRate">
-<div class="percent">-</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,16 +61,54 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Tests</a>
+<a href="#tab0">Failed tests</a>
 </li>
 <li>
-<a href="#tab1">Standard output</a>
+<a href="#tab1">Tests</a>
 </li>
 <li>
-<a href="#tab2">Standard error</a>
+<a href="#tab2">Standard output</a>
+</li>
+<li>
+<a href="#tab3">Standard error</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="como usuario quiero registrarme en Automation Exercise"></a>
+<h3 class="failures">como usuario quiero registrarme en Automation Exercise</h3>
+<span class="code">
+<pre>org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: chrome=105.0.5195.102)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-4AUAMRO', ip: '192.168.0.16', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\LUCASF~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:49440}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 5489d4220e1b6225a8d6491ca89f26bd
+	at java.base@15.0.2/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base@15.0.2/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+	at java.base@15.0.2/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@15.0.2/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base@15.0.2/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at app//org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at app//org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at app//org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at app//org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at app//org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at app//pages.BasePage.clickElement(BasePage.java:50)
+	at app//pages.MainPage.goToLoginPage(MainPage.java:19)
+	at app//steps.RegisterSteps.navigateToListPage(RegisterSteps.java:19)
+	at ✽.el usuario esta en la pagina de registro(src/test/resources/features/Register.feature:4)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -81,26 +119,27 @@
 </tr>
 </thead>
 <tr>
-<td class="skipped">como usuario quiero registrarme en Automation Exercise</td>
-<td class="skipped">-</td>
-<td class="skipped">ignored</td>
+<td class="failures">como usuario quiero registrarme en Automation Exercise</td>
+<td class="failures">50.237s</td>
+<td class="failures">failed</td>
 </tr>
 </table>
 </div>
-<div id="tab1" class="tab">
+<div id="tab2" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>.UUU</pre>
+<pre>F---</pre>
 </span>
 </div>
-<div id="tab2" class="tab">
+<div id="tab3" class="tab">
 <h2>Standard error</h2>
 <span class="code">
-<pre>Starting ChromeDriver 104.0.5112.79 (3cf3e8c8a07d104b9e1260c910efb8f383285dc5-refs/branch-heads/5112@{#1307}) on port 2232
+<pre>Starting ChromeDriver 104.0.5112.79 (3cf3e8c8a07d104b9e1260c910efb8f383285dc5-refs/branch-heads/5112@{#1307}) on port 26675
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-ago. 21, 2022 1:28:41 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+[1662823558.142][WARNING]: This version of ChromeDriver has not been tested with Chrome version 105.
+sept. 10, 2022 5:25:58 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
 </pre>
 </span>
@@ -113,7 +152,7 @@ INFO: Detected dialect: W3C
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.4.2</a> at 21 ago. 2022 1:28:45</p>
+<a href="http://www.gradle.org">Gradle 7.4.2</a> at 10 sept. 2022 17:26:47</p>
 </div>
 </div>
 </body>

@@ -2,33 +2,38 @@
 <testsuite name="runner.runner" tests="0" skipped="0" failures="0" errors="0" timestamp="1970-01-01T00:00:00" hostname="DESKTOP-4AUAMRO" time="0.0">
   <properties/>
   <system-out><![CDATA[
-Undefined scenarios:
+Failed scenarios:
 src/test/resources/features/Register.feature:3 # como usuario quiero registrarme en Automation Exercise
 
-1 Scenarios (1 undefined)
-4 Steps (3 undefined, 1 passed)
-0m5,572s
+1 Scenarios (1 failed)
+4 Steps (1 failed, 3 skipped)
+0m50,441s
 
-
-You can implement missing steps with the snippets below:
-
-@When("completa el formulario")
-public void completa_el_formulario() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new cucumber.api.PendingException();
-}
-
-@When("hace click en registrarme")
-public void hace_click_en_registrarme() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new cucumber.api.PendingException();
-}
-
-@Then("muestra que la cuenta fue creada")
-public void muestra_que_la_cuenta_fue_creada() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new cucumber.api.PendingException();
-}
+org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: chrome=105.0.5195.102)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-4AUAMRO', ip: '192.168.0.16', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\LUCASF~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:49440}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 5489d4220e1b6225a8d6491ca89f26bd
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at pages.BasePage.clickElement(BasePage.java:50)
+	at pages.MainPage.goToLoginPage(MainPage.java:19)
+	at steps.RegisterSteps.navigateToListPage(RegisterSteps.java:19)
+	at ?.el usuario esta en la pagina de registro(src/test/resources/features/Register.feature:4)
 
 
 ]]></system-out>

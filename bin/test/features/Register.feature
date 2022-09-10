@@ -6,3 +6,4 @@ Feature: Test de registro de Automation Exercise
         And hace click en registrarme
         Then elimina la cuenta
 
+
