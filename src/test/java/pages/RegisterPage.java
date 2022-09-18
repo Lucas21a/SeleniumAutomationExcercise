@@ -17,6 +17,10 @@ public class RegisterPage extends BasePage {
     // Xpath de boton de Login
     private String loginButton = "//button[contains(text(),'Login')]";
 
+    private String loginYourAccountLabel = "//h2[contains(text(),'Login to your account')]";
+
+    private String emailPassErrorLabel = "//p[contains(text(),'Your email or password is incorrect!')]";
+
     public RegisterPage() {
         super(driver);
     }
@@ -36,7 +40,6 @@ public class RegisterPage extends BasePage {
         clickElement(singUp);
     }
 
-    //
     public void registerNewUser(String name, String email) {
         writeName(name);
         writeEmail(email);
@@ -60,6 +63,19 @@ public class RegisterPage extends BasePage {
     // Click en boton Login "Login to your account"
     public void clickLogin() {
         clickElement(loginButton);
+    }
+
+    public void loginAccount(String mail, String pass) {
+        writeMailLogin(mail);
+        writePassLogin(pass);
+    }
+
+    public boolean statusLoginYourAccountLabel() {
+        return elementIsDisplayed(loginYourAccountLabel);
+    }
+
+    public boolean statusEmailPassErrorLabel() {
+        return elementIsDisplayed(emailPassErrorLabel);
     }
 
 }

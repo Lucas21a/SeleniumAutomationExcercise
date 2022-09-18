@@ -1,9 +1,6 @@
 package steps;
 
-import static org.junit.Assert.assertTrue;
-
 import org.junit.Assert;
-
 import cucumber.api.java.en.*;
 import pages.MainPage;
 import pages.RegisterFormPage;
@@ -16,7 +13,7 @@ public class RegisterSteps {
     RegisterFormPage registerForm = new RegisterFormPage();
 
     @Given("^el usuario esta en la pagina de registro$")
-    public void navigateToListPage() {
+    public void navigateToRegisterPage() {
         main.navigateToAutomationExersice();
         main.goToLoginPage();
     }
@@ -50,7 +47,7 @@ public class RegisterSteps {
     @Then("^elimina la cuenta$")
     public void ClickDelete() {
         // Verificar que 'Logged in as 'user'' es visible
-        assertTrue("Logged in as 'user' no es visible", main.statusLoginLabel());
+        Assert.assertTrue("Logged in as 'user' no es visible", main.statusLoginLabel());
         main.deleteAccount();
     }
 

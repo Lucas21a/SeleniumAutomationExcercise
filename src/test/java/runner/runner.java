@@ -7,7 +7,7 @@ import cucumber.api.junit.Cucumber;
 import pages.BasePage;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/resources/features", glue = "steps", monochrome = true, tags = "@Reg")
+@CucumberOptions(features = "src/test/resources/features", glue = "steps", monochrome = true, tags = "@login2")
 
 public class runner {
     @AfterClass
