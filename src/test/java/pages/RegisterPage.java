@@ -78,4 +78,8 @@ public class RegisterPage extends BasePage {
         return elementIsDisplayed(emailPassErrorLabel);
     }
 
+    public String urlLogin() {
+        return getCurrentUrl();
+    }
+
 }

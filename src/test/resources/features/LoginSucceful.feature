@@ -1,5 +1,5 @@
 Feature: Test de login de Automation Exercise
-    @login1
+    @login
     Scenario: como usuario quiero loguearme con usuario y contraseña correcta en Automation Exercise
         Given el usuario esta en la pagina de login
         When completa con sus datos

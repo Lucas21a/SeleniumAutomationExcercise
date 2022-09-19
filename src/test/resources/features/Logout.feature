@@ -1,3 +1,4 @@
+@logout
 Feature: Test de logout de Automation Exercise
     Scenario: el usuario se desloguea luego de hacer el login
         Given el usuario navega a la pagina de login

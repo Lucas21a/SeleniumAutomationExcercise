@@ -16,7 +16,7 @@ public class LogoutSteps {
         main.goToLoginPage();
     }
 
-    @When("^cingresa los datos de su cuenta$")
+    @When("^ingresa los datos de su cuenta$")
     public void completeForm() {
         // Verificar si 'Login to your account' es visible:
         Assert.assertTrue("El label no se muestra", login.statusLoginYourAccountLabel());
@@ -26,12 +26,15 @@ public class LogoutSteps {
     @And("^clickea el boton de login$")
     public void ClickRegister() {
         login.clickLogin();
-        // Verificar que 'Logged in as..!' es visible
-        Assert.assertTrue("El elemento 'Logged in as' no es mostrado", main.statusLoginLabel());
     }
 
     @Then("^desloguea la cuenta$")
     public void ClickLogout() {
+        // Verificar que 'Logged in as..!' es visible
+        Assert.assertTrue("El elemento 'Logged in as' no es mostrado", main.statusLoginLabel());
+
         main.clickLogout();
+        // Verificar si la pagina actual es https://www.automationexercise.com/login
+        Assert.assertEquals("https://www.automationexercise.com/login", login.urlLogin());
     }
 }

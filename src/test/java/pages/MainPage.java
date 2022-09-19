@@ -2,11 +2,16 @@ package pages;
 
 public class MainPage extends BasePage {
 
-    // xPath de boton de login en header
+    // xPath de boton Login en header
     private String buttonLogin = "//header/div[1]/div[1]/div[1]/div[2]/div[1]/ul[1]/li[4]/a[1]";
+    // xPath de boton Delete en header
     private String buttonDelete = "//header/div[1]/div[1]/div[1]/div[2]/div[1]/ul[1]/li[5]/a[1]";
+    // xPath de Label 'Logged in as ..' en header
     private String loginLabel = "//body[1]/header[1]/div[1]/div[1]/div[1]/div[2]/div[1]/ul[1]/li[10]/a[1]";
+    // xPath de boton Logout en header
     private String logoutButton = "//header/div[1]/div[1]/div[1]/div[2]/div[1]/ul[1]/li[4]/a[1]";
+    // Xpath de boton Products en header
+    private String buttonProduct = "//header/div[1]/div[1]/div[1]/div[2]/div[1]/ul[1]/li[2]/a[1]";
 
     public MainPage() {
         super(driver);
@@ -34,6 +39,10 @@ public class MainPage extends BasePage {
     // Click en el boton logout
     public void clickLogout() {
         clickElement(logoutButton);
+    }
+
+    public void clickProducts() {
+        clickElement(buttonProduct);
     }
 
 }
