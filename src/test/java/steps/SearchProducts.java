@@ -1,7 +1,6 @@
 package steps;
 
 import org.junit.Assert;
-
 import cucumber.api.java.en.*;
 import pages.MainPage;
 import pages.ProductsPage;
@@ -22,7 +21,7 @@ public class SearchProducts {
         // Verifica si ALL PRODUCTS es visible
         Assert.assertTrue("All products no es visible", products.statusAllProductsLabel());
 
-        products.writeSearchProducts("Top blue");
+        products.writeSearchProducts("Top");
         products.clickSearchProduct();
 
     }

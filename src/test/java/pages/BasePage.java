@@ -1,5 +1,6 @@
 package pages;
 
+import java.io.File;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -121,6 +122,16 @@ public class BasePage {
 
     public String getTextFromWebElemen(String locator) {
         return find(locator).getText();
+    }
+
+    public String uploadFile(String path) {
+        File file = new File(path);
+        String ruta = file.getAbsolutePath();
+        return ruta;
+    }
+
+    public void aceptAlert() {
+        driver.switchTo().alert().accept();
     }
 
 }
