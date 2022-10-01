@@ -11,6 +11,11 @@ public class ProductsPage extends BasePage {
     // xPath del label SEARCHED PRODUCTS
     private String searchedProductsLabel = "//h2[contains(text(),'Searched Products')]";
 
+    private String firstProductButton = "//body/section[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/a[1]";
+    private String secondProductButton = "//body/section[2]/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[1]/div[2]/div[1]/a[1]";
+    private String continueShoppingButton = "//button[contains(text(),'Continue Shopping')]";
+    private String viewCartButton = "//u[contains(text(),'View Cart')]";
+
     public ProductsPage() {
         super(driver);
     }
@@ -33,6 +38,22 @@ public class ProductsPage extends BasePage {
     // Devuelve un boolean segun si es visible o no el label SEARCHED PRODUCTS
     public boolean statusSearchedProducts() {
         return elementIsDisplayed(searchedProductsLabel);
+    }
+
+    public void clickFirstButton() {
+        clickElement(firstProductButton);
+    }
+
+    public void clickSecondButton() {
+        clickElement(secondProductButton);
+    }
+
+    public void clickcontinueShopping() {
+        clickElement(continueShoppingButton);
+    }
+
+    public void clickViewCart() {
+        clickElement(viewCartButton);
     }
 
 }

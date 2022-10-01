@@ -14,6 +14,8 @@ public class MainPage extends BasePage {
     private String buttonProduct = "//header/div[1]/div[1]/div[1]/div[2]/div[1]/ul[1]/li[2]/a[1]";
     // xPath de boton Contact Us
     private String buttonContactUs = "//header/div[1]/div[1]/div[1]/div[2]/div[1]/ul[1]/li[8]/a[1]";
+    // xPath de boton view Product del producto 1
+    private String buttonViewProduct = "//body/section[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[2]/ul[1]/li[1]/a[1]";
 
     public MainPage() {
         super(driver);
@@ -49,6 +51,10 @@ public class MainPage extends BasePage {
 
     public void clickContactUs() {
         clickElement(buttonContactUs);
+    }
+
+    public void clickViewProduct() {
+        clickElement(buttonViewProduct);
     }
 
 }
